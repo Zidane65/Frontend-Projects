@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Working Tabs</title>
+</head>
+<body class="bg-slate-200 flex items-center justify-center min-h-screen">
+
+<div class="w-full max-w-lg p-4">
+  <!-- ================================== -->
+  <!-- 1. THE TAB NAVIGATION BUTTONS      -->
+  <!-- ================================== -->
+  <ul class="flex p-1.5 list-none rounded-lg bg-slate-100" role="list">
+    <!-- Tab 1: Dashboard -->
+    <!-- We give the active tab its styles directly. JS will move these classes around. -->
+    <li class="flex-auto text-center">
+      <a class="tab-button block w-full px-0 py-2 text-sm font-semibold transition-all ease-in-out border-0 rounded-md cursor-pointer bg-white text-slate-800 shadow-md"
+      data-tab-target="#dashboard" role="tab" aria-selected="true">
+        Dashboard
+      </a>
+    </li>
+    <!-- Tab 2: Profile -->
+    <li class="flex-auto text-center">
+      <a class="tab-button block w-full px-0 py-2 text-sm transition-all ease-in-out border-0 rounded-md cursor-pointer text-slate-600"
+      data-tab-target="#profile" role="tab" aria-selected="false">
+        Profile
+      </a>
+    </li>
+    <!-- Tab 3: Settings -->
+    <li class="flex-auto text-center">
+      <a class="tab-button block w-full px-0 py-2 text-sm transition-all ease-in-out border-0 rounded-md cursor-pointer text-slate-600"
+      data-tab-target="#settings" role="tab" aria-selected="false">
+        Settings
+      </a>
+    </li>
+  </ul>
+
+  <!-- ================================== -->
+  <!-- 2. THE TAB CONTENT PANELS          -->
+  <!-- ================================== -->
+  <div class="p-5 bg-white rounded-b-lg shadow-lg">
+    <!-- Panel 1: Dashboard (Visible by default) -->
+    <div id="dashboard" class="tab-content" role="tabpanel">
+      <h2 class="text-2xl font-semibold text-slate-800">Dashboard Content</h2>
+      <p class="mt-2 text-slate-600">This is the dashboard. Here you can see an overview of your account and recent activity.</p>
+    </div>
+    <!-- Panel 2: Profile (Hidden by default) -->
+    <div id="profile" class="tab-content hidden" role="tabpanel">
+      <h2 class="text-2xl font-semibold text-slate-800">Profile Content</h2>
+      <p class="mt-2 text-slate-600">Here you can view and edit your personal information, profile picture, and bio.</p>
+    </div>
+    <!-- Panel 3: Settings (Hidden by default) -->
+    <div id="settings" class="tab-content hidden" role="tabpanel">
+      <h2 class="text-2xl font-semibold text-slate-800">Settings Content</h2>
+      <p class="mt-2 text-slate-600">Adjust your application settings, notification preferences, and privacy options here.</p>
+    </div>
+  </div>
+</div>
+
+<!-- This links to an external JS file. `defer` makes sure it runs after the HTML is ready. -->
+<script src="./script.js" defer></script>
+
+</body>
+</html>

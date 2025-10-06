@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Accessible Form UI</title>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+     <!-- A neat trick to center the card on the page -->
+    <main class="min-h-screen flex items-center justify-center p-4">
+     <!-- The main card container -->
+    <div class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">  <!--mian div-->
+    <form action="#" method="post">
+     <!-- Groups all the form fields together. Good for screen readers. -->
+     <fieldset class="space-y-6">
+        <legend class="text-2xl font-bold text-white mb-6" >Update Your Profile</legend>
+    <div>
+    <!-- === Full Name Field === -->
+        <label for="Full name">Full name</label>
+        <input type="text" id="Full name " name="full name " placeholder="what should we call you?" required class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md placeholder:text-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"> 
+    </div>
+    <div>
+     <!-- === Email Field === -->
+        <label for="Email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md placeholder:text-gray-500 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500">
+    </div>
+    <div>
+     <!-- === Password Field === -->
+        <label for="Password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter a newpassword" required class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md placeholder:text-gray-500 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+    </div>
+     <!-- === Confirm Password Field === -->
+    <div>
+        <label for="Confirm Password">Confirm Password</label>
+        <input type="password" id="confirm password" name="confirm password" placeholder="confirm password" required="" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md placeholder:text-gray-500 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+     <!-- Submit Button -->
+    <div class="pt-4">
+            <button 
+              type="submit" 
+              class="w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors duration-200"
+            >
+              Update Profile
+            </button>
+     </div>
+    </fieldset>
+    </form>
+     <!-- Progress Section -->
+      <section aria-labelledby="progress-heading" class="mt-8 pt-6 border-t border-gray-700">
+        <h2 id="progress-heading" class="text-xl font-bold mb-4 text-white">Setup Progress</h2>
+        <ul class="space-y-3">
+          <!-- Completed Item -->
+          <li class="flex items-center text-gray-300"><span class="mr-3 text-lg">✔️</span> Create Account</li>
+          <!-- Completed Item -->
+          <li class="flex items-center text-gray-300"><span class="mr-3 text-lg">✔️</span> Update Roadmap Progress</li>
+          <!-- Current Item - using attribute selector for styling -->
+          <li class="flex items-center font-semibold text-blue-400" aria-current="step"><span class="mr-3 text-lg">⏳</span> Setup Public Profile</li>
+          <!-- Incomplete Item -->
+          <li class="flex items-center text-gray-500"><span class="mr-3 text-lg"></span>Complete your first project</li>
+          <!-- Incomplete Item -->
+          <li class="flex items-center text-gray-500"><span class="mr-3 text-lg"></span>Invite your Friends</li>
+        </ul>
+      </section>
+   </div><!--main div-->
+   </main>
+</body>
+</html>

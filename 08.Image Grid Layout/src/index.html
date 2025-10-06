@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Layout</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-900 text-white p-4 sm:p-6 lg:p-8">
+
+    <div class="container mx-auto">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">My Awesome Gallery</h1>
+
+        <!-- 
+            GRID LAYOUT:
+            - Mobile (default): A single column grid. Everything stacks.
+            - Desktop (md: and up): A 4-column, 2-row grid.
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
+
+            <!-- IMAGE 1 (HERO) -->
+            <!-- Spans 2 columns and 2 rows on desktop -->
+            <div class="md:col-span-2 md:row-span-2 rounded-lg overflow-hidden group">
+                <img src="pic1.jpg" 
+                     alt="pic1" 
+                     class="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105">
+            </div>
+
+            <!-- IMAGE 2 -->
+            <div class="rounded-lg overflow-hidden group">
+                <img src="pic2.jpg" 
+                     alt="pic2" 
+                     class="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105">
+            </div>
+
+            <!-- IMAGE 3 -->
+            <div class="rounded-lg overflow-hidden group">
+                <img src="pic3.jpg" 
+                     alt="pic3" 
+                     class="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105">
+            </div>
+
+            <!-- IMAGE 4 -->
+            <div class="rounded-lg overflow-hidden group">
+                <img src="pic4.jpg" 
+                     alt="pic4" 
+                     class="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105">
+            </div>
+
+            <!-- IMAGE 5 -->
+            <div class="rounded-lg overflow-hidden group">
+                <img src="pic6.jpg" 
+                     alt="pic5" 
+                     class="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
